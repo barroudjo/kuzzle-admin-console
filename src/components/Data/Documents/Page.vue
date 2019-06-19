@@ -485,7 +485,7 @@ export default {
         this.fetchDocuments()
         this.deleteModalIsLoading = false
       } catch (e) {
-        this.$store.commit(SET_TOAST, { text: e.message })
+        this.$store.commit(SET_TOAST, { text: `An error occurred while fetching the documents: ${e.message}` })
         this.$log.error(e)
       }
     },
